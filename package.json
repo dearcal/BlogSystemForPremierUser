@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dearcal/BlogSystemForPremierUser/issues"
   },
-  "homepage": "https://github.com/dearcal/BlogSystemForPremierUser#readme"
+  "homepage": "https://github.com/dearcal/BlogSystemForPremierUser#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
