@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const mongodb = require('./db/mongodb');
+
 var app = express();
 
 // view engine setup
@@ -19,6 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//data server
+mongodb.connect();
 
 //初始化路由
 app.use('/', indexRouter);
