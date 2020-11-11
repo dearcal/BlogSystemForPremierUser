@@ -1,7 +1,8 @@
+const {argv} = require('yargs');
+url=`mongodb://test:test@${argv.db_ip}/?authSource=test`
 
+console.log(url)
 
 exports.MONGODB = {
-    uri:`mongodb://47.99.44.27:27017/blog_node`,
-    username:'',
-    password:''
+    uri:`mongodb://test:test@${argv.db_ip}/?authSource=test`
 };
