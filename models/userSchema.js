@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const {mongoose} = require('../db/mongoose');
+const {mongoose} = require('../db/mongodb');
 const autoIncrement = require('mongoose-auto-increment');
 
 const userSchema = new mongoose.Schema({
@@ -25,11 +25,11 @@ const userSchema = new mongoose.Schema({
 
 
 //autoIncrement
-userSchema.plugin(autoIncrement.plugin,{
-    model:'User',
-    field:'id',
-    startAt:1,
-    incrementBy:1
-});
+// userSchema.plugin(autoIncrement.plugin,{
+//     model:'User',
+//     field:'id',
+//     startAt:1,
+//     incrementBy:1
+// });
 
 module.exports = mongoose.model('User', userSchema);
